@@ -16,7 +16,7 @@ public class SchooController {
 	public String index() {
 		// index.htmlのパスを返却
 		// indexという文字列を返却
-		return "index";
+		return "index"; //この文字列はファイル名を指定している
 	}
 	/**
 	 * ログイン処理リクエスト
@@ -29,10 +29,9 @@ public class SchooController {
 			            @RequestParam("loginPassword") String loginPassword) {
 		//ログインチェック
 		if("schoo".equals(loginId) && "pass".equals(loginPassword)) {
-			//ログイン成功
-			return "login-ok";
+			return "login-ok"; //ログイン成功
 		} else {
-			return "login-ng";
+			return "login-ng"; //ログイン失敗
 		}
 	}
 	
